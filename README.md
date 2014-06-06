@@ -5,18 +5,23 @@ You can use it to quickly bootstrap your react.js projects.
 
 ## Getting Started
 
-1. Clone the Project
+### Clone the Project
 
-    git clone https://github.com/fizerkhan/react-seed.git
+```
+git clone https://github.com/fizerkhan/react-seed.git
+cd react-seed
+```
 
-    cd react-seed
+### Install dependencies
 
-2. Install dependencies
+```
+npm install
+```
 
-    npm install
+### Run the Application
 
-3. Start static server
-
-    gulp
+```
+gulp
+```
 
 Now browse to the app at [http://localhost:8000](http://localhost:8000)
