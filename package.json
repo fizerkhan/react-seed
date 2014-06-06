@@ -18,6 +18,7 @@
     "reactify": "~0.13.1",
     "gulp-concat": "~2.1.7",
     "gulp-imagemin": "~0.1.4",
+    "gulp-clean": "~0.3.0",
     "jquery": "~2.1.0",
     "envify": "~1.2.1",
     "react": "~0.10.0",
