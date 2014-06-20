@@ -5,7 +5,7 @@ var gulp       = require('gulp'),
     sass       = require('gulp-sass'),
     watch      = require('gulp-watch'),
     connect    = require('gulp-connect'),
-    clean = require('gulp-clean');
+    clean      = require('gulp-clean');
 
 var ROOT = __dirname + '/build'
 
@@ -15,13 +15,13 @@ gulp.task('clean', function () {
 });
 
 gulp.task('styles', function () {
-  gulp.src('assets/scss/main.scss')
+  gulp.src('client/scss/main.scss')
     .pipe(sass())
     .pipe(gulp.dest('build/css/'));
 });
 
 gulp.task('scripts', function () {
-  gulp.src(['assets/js/app.js'])
+  gulp.src(['client/js/app.js'])
       .pipe(browserify({
           debug: true,
           transform: [ 'reactify' ]
@@ -30,21 +30,21 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('images', function () {
-  gulp.src(['assets/img/**/*.png', 'assets/img/**/*.jpg', 'assets/img/**/*.gif'])
+  gulp.src(['client/img/**/*.png', 'client/img/**/*.jpg', 'client/img/**/*.gif'])
       .pipe(imagemin())
       .pipe(gulp.dest('build/img/'));
 });
 
 gulp.task('copy', function(){
-  gulp.src('index.html')
+  gulp.src('client/*.html')
     .pipe(gulp.dest('build/'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('assets/js/**/*.js', [ 'scripts' ]);
-  gulp.watch('assets/scss/**/*.scss', [ 'styles' ]);
-  gulp.watch('assets/img/**/*', [ 'images' ]);
-  gulp.watch('*.html', [ 'copy' ]);
+  gulp.watch('client/js/**/*.js', [ 'scripts' ]);
+  gulp.watch('client/scss/**/*.scss', [ 'styles' ]);
+  gulp.watch('client/img/**/*', [ 'images' ]);
+  gulp.watch('client/*.html', [ 'copy' ]);
 });
 
 // gulp.task('livereload', function() {

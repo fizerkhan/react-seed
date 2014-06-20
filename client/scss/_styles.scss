@@ -1,4 +1,6 @@
 /* Set Defaults for Body*/
+$brand-color: #7F2E94 !default;
+
 body {
   line-height: 1.5;
   font-size: 100%;
@@ -32,7 +34,7 @@ hr {
 
 header {
   height: 50px;
-  background: #7F2E94;
+  background: $brand-color;
   margin-bottom: 20px;
   line-height: 50px;
   overflow: hidden;
